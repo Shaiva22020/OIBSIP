@@ -1,57 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaiva - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AstraNova — Simple, fast landing page</title>
+  <meta name="description" content="A clean, responsive landing page starter with modern CSS." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <img src="WhatsApp Image 2025-08-16 at 1.45.54 AM.jpeg" alt="My photo" class="profile-pic">
-        <h1>Hi, I’m <span class="highlight">Shaiva</span></h1>
-        <p class="tagline">Web Enthusiast | Creative Thinker | Lifelong Learner</p>
-    </header>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <section class="about">
-        <h2>About Me</h2>
-        <p>
-            I’m a passionate web developer with a knack for creating clean, functional, and visually appealing websites.
-            I enjoy learning new technologies and turning ideas into reality through code.
-        </p>
-    </section>
+  <header class="site-header" data-glass>
+    <div class="container">
+      <div class="brand">
+        <span class="logo">★</span>
+        <span class="name">AstraNova</span>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact" class="btn btn--ghost">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <section class="skills">
-        <h2>Skills</h2>
-        <div class="skill-list">
-            <span class="skill-card">HTML</span>
-            <span class="skill-card">CSS</span>
-            <span class="skill-card">JavaScript</span>
-            <span class="skill-card">Python</span>
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <h1><span class="eyebrow">Launch-ready</span> Make a small page that feels big.</h1>
+        <p class="lede">A tidy starter you can tweak in minutes. No frameworks, just HTML & CSS. Keep what you need, delete the rest.</p>
+        <div class="cta">
+          <a class="btn btn--primary" href="#contact">Get Started</a>
+          <a class="btn btn--ghost" href="#features">See Features</a>
         </div>
+      </div>
+      <div class="hero-art" aria-hidden="true"></div>
     </section>
 
-    <section class="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Portfolio Website</h3>
-            <p>A responsive portfolio to showcase my work and skills.</p>
+    <section id="features" class="features">
+      <div class="container">
+        <h2>Neat features, zero fuss</h2>
+        <ul class="grid">
+          <li class="card">
+            <h3>Responsive out-of-the-box</h3>
+            <p>Grid and flex layouts that gracefully wrap so nothing overlaps on small screens.</p>
+          </li>
+          <li class="card">
+            <h3>Accessible by default</h3>
+            <p>Semantic tags, focus styles, and a skip link. Start good habits early.</p>
+          </li>
+          <li class="card">
+            <h3>Modern CSS</h3>
+            <p>Custom properties, <code>clamp()</code> fonts, and fluid spacing—simple, readable, tweakable.</p>
+          </li>
+          <li class="card">
+            <h3>Clean palette</h3>
+            <p>Muted background, high-contrast text, and one accent color. Change two variables to rebrand.</p>
+          </li>
+          <li class="card">
+            <h3>Tiny footprint</h3>
+            <p>One HTML file, one CSS file. Load fast, feel snappy.</p>
+          </li>
+          <li class="card">
+            <h3>Starter components</h3>
+            <p>Header, hero, cards, and a footer—enough to launch.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container split">
+        <div class="copy">
+          <h2>Built to be edited</h2>
+          <p>Swap the text, tweak the colors, and ship. You don’t need JS here—focus on layout, spacing, and alignment.</p>
+          <ul class="bullets">
+            <li>Keep line length ~60–75 chars for readability.</li>
+            <li>Use consistent spacing (we use <code>--space-*</code> tokens).</li>
+            <li>Let the grid wrap; avoid fixed heights.</li>
+          </ul>
         </div>
-        <div class="project">
-            <h3>EcoBuddy Chatbot</h3>
-            <p>An AI-powered chatbot that helps users make sustainable choices.</p>
-        </div>
+        <figure class="mock">
+          <img src="https://picsum.photos/640/420" alt="Placeholder preview of a landing page section." />
+          <figcaption>Drop in a real screenshot later.</figcaption>
+        </figure>
+      </div>
     </section>
 
-    <section class="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:shaivabirenshah@gmail.com">shaivabirenshah@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/shaiva-shah-a87b3" target="_blank">shaiva-shah-a87b3</a></p>
-        <p>Resume: <a href="https://acrobat.adobe.com/id/urn:aaid:sc:AP:d46afe66-f0e6-4956-bf36-efbede302dd6" target="_blank">My Resume</a></p>
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Ready to try?</h2>
+        <form class="inline-form" action="#" method="post" onsubmit="return false;">
+          <label class="sr-only" for="email">Email</label>
+          <input id="email" type="email" placeholder="you@example.com" required />
+          <button class="btn btn--primary" type="submit">Notify Me</button>
+        </form>
+        <p class="tiny">No spam. Unsubscribe any time.</p>
+      </div>
     </section>
+  </main>
 
-    <footer>
-        <p>© 2025 Your Name. All Rights Reserved.</p>
-    </footer>
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; <span id="year"></span> AstraNova. Made with plain HTML & CSS.</small>
+      <a href="#" class="tiny">Privacy</a>
+    </div>
+  </footer>
+
+  <script>
+    // Minimal JS: set current year. Delete if you don't want JS.
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
